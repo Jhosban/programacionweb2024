@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    height: 900px;
+    background-image: url(images/palabrainicio.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.servicios {
+    height: 900px;
+    background-image: url(images/palabraservicios.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.productos {
+    height: 900px;
+    background-image: url(images/palabraproductos.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.contacto {
+    height: 900px;
+    background-image: url(images/palabracontactanos.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.content {
+    min-width: 70px;
+    background: linear-gradient(
+        90deg,
+        rgba(218, 217, 212, 1)15%,
+        rgba(87, 221, 234, 1)70%
+    );
+}
+
+.menu {
+    position: relative;
+    top: 1px;
+    left: 5px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.logo {
+    height: 82px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #333336;
+    display: block;
+    font-weight: bold;
+}
+
+.menu .navbar ul li a:hover {
+    color: #75757e;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:791px) {
+    .content {
+        min-height: 70px;
+    }
+
+    .menu {
+        top: 0;
+        padding: 10px;
+        left: -5px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(
+        90deg,
+        rgba(218, 217, 212, 1)20%,
+        rgba(87, 221, 234, 1)70%
+        );
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    } 
+
+} 
