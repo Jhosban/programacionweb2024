@@ -12,30 +12,34 @@ body {
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center center;
+    color: transparent;
 }
 
-.servicios {
+.servicios-fondo {
     height: 900px;
     background-image: url(images/palabraservicios.jpg);
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center center;
+    color: transparent;
 }
 
-.productos {
+.productos-fondo {
     height: 900px;
     background-image: url(images/palabraproductos.jpg);
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center center;
+    color: transparent;
 }
 
-.contacto {
+.contacto-fondo {
     height: 900px;
     background-image: url(images/palabracontactanos.jpg);
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center center;
+    color: transparent;
 }
 
 
