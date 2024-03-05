@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.leters{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+}
+
+.uno{
+    background-color: aqua;
+    padding: 5px;
+}
+
+.dos{
+    background-color: blue;
+    padding: 5px 30px;
+}
+
+.tres{
+    background-color: mediumorchid;
+    padding: 5px;
+}
+
+.cuatro{
+    background-color: gray;
+    padding: 5px;
+}
+
+.cinco{
+    background-color: yellow;
+    padding: 5px 50px;
+}
+
+.seis{
+    background-color: orange;
+    padding: 5px;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container2{
+    width: 1350px;
+    height: 680px;
+    border: solid red 5px;
+    margin-left: 42px;
+}
+
+.numbers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 50px;
+}
+
+.uno2{
+    background-color: aqua;
+    padding: 0 3.85% 0;
+}
+
+.dos2{
+    background-color: blue;
+    padding: 0 3.85% 0;
+    height: 100%;
+}
+
+.tres2{
+    background-color: mediumorchid;
+    padding: 0 3.85% 0;
+
+}
+
+.cuatro2{
+    background-color: gray;
+    padding: 0 3.85% 0;
+
+}
+
+.cinco2{
+    background-color: yellow;
+    padding: 0 3.85% 0;
+
+}
+
+.seis2{
+    background-color: orange;
+    padding: 0 3.85% 0;
+
+}
+
+.siete2{
+    background-color: red;
+    padding: 0 3.85% 0;
+
+}
+
+.ocho2{
+    background-color: grey;
+    padding: 0 3.85% 0;
+
+}
+
+.nueve2{
+    background-color: greenyellow;
+    padding: 0 3.85% 0;
+
+}
+
+.diez2{
+    background-color: lightgreen;
+    padding: 0 3.85% 0;
+
+}

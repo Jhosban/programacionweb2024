@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <img class="estrella1" src="Star1.svg">
+        <img class="estrella2" src="star2.svg">
+        <img class="estrella3" src="Star3.svg">
+        <img class="estrella4" src="star4.svg">
+        <img class="estrella5" src="star5.svg">
+        <img class="estrella6" src="star6.svg">
+        <img class="estrella7" src="star7.svg">
+        <img class="estrella8" src="star8.svg">
+        <img class="estrella9" src="star9.svg">
+    
+    </img>
+        <div class="container_form">
+            <picture class="ghost">
+                <img src="fantasma2.jpeg" alt="fantasma" width="140" height="148">
+            </picture>
+            <form name="login_form" method="post" action="/send/" accept-charset="UTF-8">
+                <input class="content" type="text" name="username" placeholder="Username">
+                <input class="content" type="password" name="password" placeholder="Password">
+                <div class="checkbox-link">
+                    <label><input class="checkbox"  type="checkbox" name="remember_me" checked>Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button class="button">LOGIN</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

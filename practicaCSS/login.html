@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <picture class="stars">
+                <img src="/images/Stars.png" alt="stars">
+        </picture>
+        <div class="container_form">
+            <picture class="ghost">
+                <img src="/images/fantasma2.jpg" alt="fantasma" width="140" height="148">
+            </picture>
+            <form name="login_form" method="post" action="/send/" accept-charset="UTF-8">
+                <input class="content" type="text" name="username" placeholder="Username">
+                <input class="content" type="password" name="password" placeholder="Password">
+                <div class="checkbox-link">
+                    <label><input class="checkbox"  type="checkbox" name="remember_me" checked>Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button class="button">LOGIN</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
