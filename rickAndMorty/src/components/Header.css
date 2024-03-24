@@ -1,0 +1,14 @@
+.header{
+    background-color: aqua;
+    padding: 29.5px;
+}
+
+.content{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-brand {
+    font-size: 30px;
+}

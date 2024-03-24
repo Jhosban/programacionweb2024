@@ -1,0 +1,26 @@
+.container {
+    width: 100 vw;
+    height: 100px;
+    background: rgb(2,0,36);
+    background: linear-gradient(274deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.icon_home {
+    font-size: 50px;
+    color: white;
+}
+
+.icon_user{
+    font-size: 50px;
+    color: white;
+}
+
+.container img{
+    width: 100px;
+    height: 100px;
+}
