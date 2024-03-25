@@ -1,5 +1,5 @@
 .header{
-    background-color: aqua;
+    background-color: #39ff14;
     padding: 29.5px;
 }
 
@@ -11,4 +11,8 @@
 
 .navbar-brand {
     font-size: 30px;
+}
+
+.navbar-brand img {
+    margin-bottom: 8px;
 }

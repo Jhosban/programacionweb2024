@@ -3,20 +3,36 @@ import './Content.css'
 import React from 'react'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { useState, useEffect } from "react";
 import axios from 'axios';
 
+
+
+
+
+
+
 export const Content = () => {
   const [persons, setPersons] = useState([]);
 
+
   const getPersons = async () => {
-    const response = await axios.get("https://rickandmortyapi.com/api/character");
-    console.log(response)
-    setPersons(response.data.results);
-  }
+    const allPersons = [];
+
+    for (let page = 1; page <= 41; page++) {
+      try {
+        const response = await axios.get(`https://rickandmortyapi.com/api/character?page=${page}`);
+        allPersons.push(...response.data.results);
+      } catch (error) {
+        console.log('Error fetching persons:', error);
+      }
+    }
+
+  console.log(allPersons);
+  setPersons(allPersons);
+};
 
   useEffect(() => {
     getPersons()
@@ -26,20 +42,21 @@ export const Content = () => {
     <div className='card_persons'>
       {
         persons.map((person, index) => (
-          <Card key={index} sx={{ maxWidth: 300 }}>
+          <Card key={index} sx={{ maxWidth: 300 }} className="card-container">
             <CardActionArea>
-              <CardMedia
-                component="img"
-                height="300"
-                image={person.image}
-                alt="imagen de API"
-              />
+              <img className="img-fluid rounded-pill" src={person.image} alt={person.name} />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                   {person.name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {person.species}
+                  Species: {person.species}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Status: {person.status}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                Location : {person.location.name}
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -49,7 +66,3 @@ export const Content = () => {
     </div>
   )
 }
-
-
-
-

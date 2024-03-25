@@ -13,7 +13,7 @@ export const Header = () => {
           <Navbar.Brand href="#home">
               <img
               alt="profe lo amo"
-              src="/src/assets/logo.svg"
+              src="/src/assets/File-05.svg"
               width="40"
               height="40" />{' '}
               Rick and Morty Characters

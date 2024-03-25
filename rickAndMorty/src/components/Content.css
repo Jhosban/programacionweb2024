@@ -5,3 +5,9 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
 }
+
+.card-container {
+    border-style: solid;
+    border-color: #39ff14;
+    border-width: 1px;
+  }
