@@ -10,15 +10,19 @@ import axios from 'axios';
 
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 4b084f815d95419b1bf65fd011d6628b633c861a
 export const Content = () => {
   const [persons, setPersons] = useState([]);
 
 
   const getPersons = async () => {
+<<<<<<< HEAD
     const allPersons = [];
 
     for (let page = 1; page <= 41; page++) {
@@ -33,6 +37,12 @@ export const Content = () => {
   console.log(allPersons);
   setPersons(allPersons);
 };
+=======
+    const response = await axios.get("https://rickandmortyapi.com/api/character?page=1");
+    console.log(response)
+    setPersons(response.data.results);
+  }
+>>>>>>> 4b084f815d95419b1bf65fd011d6628b633c861a
 
   useEffect(() => {
     getPersons()
@@ -40,10 +50,15 @@ export const Content = () => {
 
   return (
     <div className='card_persons'>
+
       {
         persons.map((person, index) => (
           <Card key={index} sx={{ maxWidth: 300 }} className="card-container">
             <CardActionArea>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b084f815d95419b1bf65fd011d6628b633c861a
               <img className="img-fluid rounded-pill" src={person.image} alt={person.name} />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -56,6 +71,12 @@ export const Content = () => {
                   Status: {person.status}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
+                Location : {person.location.name}
+                </Typography>
+                <Typography>
+                  Status: {person.status}
+                </Typography>
+                <Typography>
                 Location : {person.location.name}
                 </Typography>
               </CardContent>
