@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java_Backend.iml" filepath="$PROJECT_DIR$/.idea/Java_Backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crudProgramacionWeb/crudProgramacionWeb.iml" filepath="$PROJECT_DIR$/crudProgramacionWeb/crudProgramacionWeb.iml" />
+    </modules>
+  </component>
+</project>

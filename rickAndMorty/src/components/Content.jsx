@@ -35,7 +35,6 @@ export const Content = () => {
 
   return (
     <div className='card_persons'>
-
       {
         persons.map((person, index) => (
           <Card key={index} sx={{ maxWidth: 300 }} className="card-container">
