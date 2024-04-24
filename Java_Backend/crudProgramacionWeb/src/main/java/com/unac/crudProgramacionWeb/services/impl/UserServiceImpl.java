@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -42,5 +44,37 @@ public class UserServiceImpl implements UserService {
                         .birthdate(userEntity.getBirthdate())
                         .build())
                 .toList();
+    }
+
+    @Override
+    public UserDTO getUserById(Integer id) {
+        Optional<UserEntity> userEntity = userDAO.findById(id);
+        return UserDTO.builder()
+                .idUser(userEntity.get().getIdUser())
+                .name(userEntity.get().getName())
+                .email(userEntity.get().getEmail())
+                .birthdate(userEntity.get().getBirthdate())
+                .build();
+    }
+
+    @Override
+    public void deleteUser(Integer id) {
+        userDAO.deleteById(id);
+    }
+
+    @Override
+    public UserDTO getUserByName(String name) {
+        UserEntity userEntity = userDAO.findByName(name);
+        return UserDTO.builder()
+                .idUser(userEntity.getIdUser())
+                .name(userEntity.getName())
+                .email(userEntity.getEmail())
+                .birthdate(userEntity.getBirthdate())
+                .build();
+    }
+
+    @Override
+    public UserDTO getUserByNameHSQL(String name) {
+        return null;
     }
 }
