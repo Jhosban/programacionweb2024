@@ -17,7 +17,6 @@ public interface UserService {
 
     UserDTO getUserByNameHSQL(String name);
 
-
-    //UserDTO updateUser(Integer id, UserDTO userDTO);
+    UserDTO updateUser(Integer id, UserDTO userDTO);
 
 }

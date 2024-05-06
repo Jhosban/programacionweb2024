@@ -83,4 +83,36 @@ public class UserController {
             return ResponseEntity.status(500).body(responseDTO);
         }
     }
+
+    @GetMapping("/getname_native/{name}")
+    public ResponseEntity<ResponseDTO> findByIdByNative(@PathVariable("name") String name){
+        ResponseDTO responseDTO = new ResponseDTO();
+        try{
+            UserDTO user = userService.getUserByNameHSQL(name);
+            responseDTO.setStatus(200);
+            responseDTO.setMessage("User Fetch Successfully");
+            responseDTO.setResult(user);
+            return ResponseEntity.ok(responseDTO);
+        }catch (Exception e){
+            responseDTO.setStatus(500);
+            responseDTO.setMessage("Server Error");
+            return ResponseEntity.status(500).body(responseDTO);
+        }
+    }
+
+    @PutMapping("/actualizar/{id}")
+    public ResponseEntity<ResponseDTO> updateUser(@PathVariable("id") Integer id, @RequestBody UserDTO userDTO) {
+    ResponseDTO responseDTO = new ResponseDTO();
+    try {
+        UserDTO updatedUser = userService.updateUser(id, userDTO);
+        responseDTO.setStatus(200);
+        responseDTO.setMessage("User updated successfully");
+        responseDTO.setResult(updatedUser);
+        return ResponseEntity.ok(responseDTO);
+    } catch (Exception e) {
+        responseDTO.setStatus(500);
+        responseDTO.setMessage("Server Error");
+        return ResponseEntity.status(500).body(responseDTO);
+    }
+}
 }

@@ -7,8 +7,8 @@ import com.unac.crudProgramacionWeb.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -75,6 +75,30 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDTO getUserByNameHSQL(String name) {
-        return null;
+        List<Object[]> users = userDAO.findByUsername(name);
+        UserDTO userDTO = new UserDTO();
+        if (!users.isEmpty()) {
+            userDTO.setIdUser((Integer) users.get(0)[0]);
+            userDTO.setBirthdate((Date) users.get(0)[1]);
+            userDTO.setEmail((String) users.get(0)[2]);
+            userDTO.setName((String) users.get(0)[3]);
+        }
+        return userDTO;
+    }
+
+    @Override
+    public UserDTO updateUser(Integer id, UserDTO userDTO) {
+        Optional<UserEntity> userEntityOptional = userDAO.findById(id);
+        UserEntity userEntity = userEntityOptional.get();
+        userEntity.setName(userDTO.getName());
+        userEntity.setEmail(userDTO.getEmail());
+        userEntity.setBirthdate(userDTO.getBirthdate());
+        UserEntity updatedUser = userDAO.save(userEntity);
+        return UserDTO.builder()
+                .idUser(updatedUser.getIdUser())
+                .name(updatedUser.getName())
+                .email(updatedUser.getEmail())
+                .birthdate(updatedUser.getBirthdate())
+                .build();
     }
 }
