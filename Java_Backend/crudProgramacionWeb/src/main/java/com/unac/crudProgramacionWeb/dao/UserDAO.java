@@ -5,7 +5,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
-import java.util.Objects;
+
+// Hacemos nuestra interfaz que se va a encargar de poder acceder a la base de datos
+// Esta va a extender de jpaRepository y recibira la clase UserEntity y el tipo de dato del id
 
 public interface UserDAO extends JpaRepository<UserEntity, Integer> {
     @Query(value = "SELECT u FROM UserEntity u WHERE u.name = ?1")

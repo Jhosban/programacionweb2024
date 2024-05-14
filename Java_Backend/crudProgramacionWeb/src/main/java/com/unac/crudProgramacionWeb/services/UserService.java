@@ -4,6 +4,8 @@ import com.unac.crudProgramacionWeb.dto.UserDTO;
 
 import java.util.List;
 
+//en esta interfaz se declararan los servicios que hagamos la implemntacion y servira como fachada
+
 public interface UserService {
     UserDTO saveUser(UserDTO userDTO);
 

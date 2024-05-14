@@ -11,10 +11,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+//Aqui seran la implementacion de de los servicios por lo tanto lo implementamos a UserService
+
+@Service //importante para que lo pueda reconocer como servicios
 public class UserServiceImpl implements UserService {
     @Autowired
-    private UserDAO userDAO;
+    private UserDAO userDAO; // Esto servira para poder acceder a la base de datos
 
     @Override
     public UserDTO saveUser(UserDTO userDTO) {

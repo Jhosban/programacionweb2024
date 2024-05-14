@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// Aqui vamos a crear los endpoints para utilizarlos en el front
 @RestController
 @RequestMapping("/users")
 public class UserController {
     @Autowired
-    private UserService userService;
+    private UserService userService; // Esto servira para traer los servicios que hayamos creado
     @PostMapping("/guardar")
     public ResponseEntity<ResponseDTO> savedUserController(@RequestBody UserDTO obj) {
         ResponseDTO responseDTO = new ResponseDTO();
