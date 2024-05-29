@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const user_routes = require('./src/routes/userRoutes');
+
 require("dotenv").config();
 
 const app = express();
@@ -35,6 +37,6 @@ app.get("/status", (req, res) => {
   });
 });
 
-
+app.use('/api', auth_routes);
 
 module.exports = app;
